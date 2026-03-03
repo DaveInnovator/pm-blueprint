@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
   const nav = useNavigate();
@@ -42,11 +42,16 @@ export default function Login() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center p-6">
       <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 mb-6">
-          <div className="w-7 h-7 rounded-lg bg-zinc-100 flex items-center justify-center">
-            <span className="text-zinc-950 text-xs font-bold">PM</span>
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg bg-zinc-100 flex items-center justify-center">
+              <span className="text-zinc-950 text-xs font-bold">PM</span>
+            </div>
+            <span className="text-lg font-semibold tracking-tight">Blueprint</span>
           </div>
-          <span className="text-lg font-semibold tracking-tight">Blueprint</span>
+          <Link to="/" className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">
+            ← Home
+          </Link>
         </div>
 
         <div className="text-xl font-semibold">

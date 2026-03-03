@@ -64,11 +64,13 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-900">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-zinc-100 flex items-center justify-center">
-            <span className="text-zinc-950 text-xs font-bold">PM</span>
-          </div>
-          <span className="font-semibold tracking-tight">Blueprint</span>
+        <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-zinc-100 flex items-center justify-center">
+              <span className="text-zinc-950 text-xs font-bold">PM</span>
+            </div>
+            <span className="font-semibold tracking-tight">Blueprint</span>
+          </Link>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-xs text-zinc-500 hidden sm:block">{user.email}</span>
